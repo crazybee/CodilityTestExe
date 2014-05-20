@@ -600,7 +600,16 @@ class Solution {
     }
     public static int mymaxprofit(int [] A){
     	int profit = 0;
-    	
+    	int test = 0;
+    	for (int i = 1; i< A.length; i ++){
+    		if (A[i] < test){
+    			
+    			test = i;
+    		}
+    		profit = getMax(profit, A[i]-A[test]);
+    		
+    		
+    	}
     	
     	
     	return profit;
